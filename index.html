@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Blood Bank System</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('donorRegistration')">Donor Registration</a></li>
+                <li><a href="#" onclick="showPage('bloodAvailability')">Blood Availability</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div id="home" class="page">
+            <h2>Welcome to the Blood Bank System</h2><br>
+            <h3>PLEASE DONATE Blood</h3>
+            <p>Your contribution can save lives. Please register as a donor or request blood if needed.</p>
+        </div>
+
+        <div id="donorRegistration" class="page" style="display: none;">
+            <h2>Donor Registration</h2>
+            <form id="donorForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Blood Type (e.g., A+, B-, O+)" required>
+                <input type="text" placeholder="Contact Number" required>
+                <button type="submit">Register as Donor</button>
+            </form>
+        </div>
+
+        <div id="bloodAvailability" class="page" style="display: none;">
+            <h2>Available Blood Types</h2>
+            <ul id="bloodTypes">
+                <li>A+ <span class="quantity">10</span></li>
+                <li>A- <span class="quantity">5</span></li>
+                <li>B+ <span class="quantity">8</span></li>
+                <li>B- <span class="quantity">3</span></li>
+                <li>O+ <span class="quantity">12</span></li>
+                <li>O- <span class="quantity">6</span></li>
+                <li>AB+ <span class="quantity">4</span></li>
+                <li>AB- <span class="quantity">2</span></li>
+            </ul>
+        </div>
+
+        <div id="contact" class="page" style="display: none;">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, please contact us at:</p>
+            <p>Email: support@bloodbank.com</p>
+            <p>Phone: +1 234 567 890</p>
+        </div>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
